@@ -10,6 +10,10 @@ It involves
 -Reading Frequency output from the sensor.
 -Display of the Relative Humidity value on a 16x2 LCD.
 
+ This code has been tested with:
+  Hardware: CY8CKIT-030 with HH10 module from www.sparkfun.com
+  Software: PSoC Creator 2.1 with cy_boot 3.0
+
 -kmmankad
 
 http://kmmankad.blogspot.com
