@@ -1,0 +1,29 @@
+Last Modified Date & Time: 05/31/2012 16:46:07
+
+Project : HH10D
+		Schematic : TopDesign/TopDesign.cysch
+
+		I2C	v 3.0	v 3.1
+
+
+Last Modified Date & Time: 06/19/2012 19:06:46
+
+Project : HH10D
+		Schematic : TopDesign/TopDesign.cysch
+
+		Counter	v 2.10	v 2.20
+		Clock_1	v 1.60	v 1.70
+		CountClk	v 1.60	v 1.70
+		ISR	v 1.50	v 1.60
+		Fin	v 1.60	v 1.70
+		SCL	v 1.60	v 1.70
+		SDA	v 1.60	v 1.70
+		LCD	v 1.50	v 1.60
+		I2C	v 3.1	v 3.10
+
+Project : HH10D
+		Design Wide APIs
+
+		cy_boot	v 2.40	v 3.0
+
+
