@@ -14,7 +14,9 @@
 			3.Use the above data to calculate RH using RH=(offset-frequency)*sens/2^12
 			4.Display the formatted RH on the LCD.
 			
- Tested with Sparkfun's HH10D with 4.7k pullups.
+ This code has been tested with:
+  Hardware: CY8CKIT-030 with HH10 module from www.sparkfun.com
+  Software: PSoC Creator 2.1 with cy_boot 3.0
  Note: 8bit addressing has been enabled in the I2C_EEPROM.h,by commenting out MSByte lines.
 */
 #include <device.h>
@@ -34,16 +36,15 @@ float GetHum(uint8 sensmsb,uint8 senslsb,uint8 offmsb,uint8 offlsb);
 
 //Interrupt Service Routine for Period Measurement.
 CY_ISR(Cap){
-//IMPORTANT To do a ReadStatusRegister call,since that clears interrupt flag.
-Counter_ReadStatusRegister();// This will clear the interrupt if set.
-period=Counter_ReadCapture();//Read the Capture Value.
-/*Capture value will give us the period of the sq. wave.
-in microseconds. */
+    //IMPORTANT To do a ReadStatusRegister call,since that clears interrupt flag.
+    Counter_ReadStatusRegister();// This will clear the interrupt if set.
+    period=Counter_ReadCapture();//Read the Capture Value.
+    /*Capture value will give us the period of the sq. wave.
+    in microseconds. */
 }
 
 
-void main()
-{
+void main(){
 	//Variable to hold Calculated Humidity Value.
 	float Hum;
 	
